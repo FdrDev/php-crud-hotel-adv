@@ -1,0 +1,32 @@
+*{
+  margin: 0; box-sizing: border-box; padding: 0;
+}
+
+body{
+  font-family: 'Montserrat',sans-serif;
+  color: white;
+  background: radial-gradient(#03a9f4, #004b6d);
+  height: 100vh;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+.container-status{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagamenti{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 2px;
+}
