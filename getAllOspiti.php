@@ -13,11 +13,8 @@
   }
 
   $sql = "
-          SELECT status, price, id
-          FROM pagamenti
-          WHERE status LIKE 'pending'
-          GROUP BY status, price, id
-          ORDER BY price DESC
+          SELECT name , lastname
+          FROM ospiti
   ";
 
   $result = $conn->query($sql);

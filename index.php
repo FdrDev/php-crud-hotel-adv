@@ -25,10 +25,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
     <!-- ADD TEMPLATE HANDLEBARS -->
     <script id="templateStatus" type="text/x-handlebars-template">
-      <div class="pagamenti">
-        <p>Stato del pagamento</p>
-        <h1>{{status}}</h1>
-        <h2>Prezzo<br>{{price}}€</h2>
+      <div class="pagamenti" data-id="{{id}}">
+        <i class="far fa-trash-alt delete"></i>
+        <i class="far fa-edit edit"></i>
+        <p>Stato del pagamento<br>ID: {{id}}</p>
+        <h2>{{status}}</h>
+        <h3>Prezzo<br>{{price}}€</h3>
+        <ul>
+          <li class="create_at"></li>
+        </ul>
       </div>
     </script>
   </head>
@@ -36,6 +41,7 @@
 
 
     <div class="container">
+      <h1>PENDING</h1>
       <div class="container-status">
 
       </div>

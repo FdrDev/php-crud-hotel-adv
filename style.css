@@ -14,12 +14,39 @@ body{
   margin: auto;
 }
 
+.container h1{
+  text-align: center;
+}
+
 .container-status{
   display: flex;
   flex-wrap: wrap;
 }
 
+li{
+  font-size: 10px;
+  list-style-type: none;
+}
+
+i{
+  cursor: pointer;
+}
+
+.delete{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.edit{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
 .pagamenti{
+  text-align: center;
+  position: relative;
   width: 200px;
   height: 200px;
   display: flex;

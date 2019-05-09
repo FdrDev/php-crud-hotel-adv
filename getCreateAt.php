@@ -1,5 +1,9 @@
 <?php
 
+if($_POST["id"]){
+
+  $id= $_POST["id"];
+  // var_dump($id); die();
   $servername = "localhost";
   $username = "root";
   $password = "FedePhp992";
@@ -13,11 +17,9 @@
   }
 
   $sql = "
-          SELECT status, price, id
+          SELECT created_at
           FROM pagamenti
-          WHERE status LIKE 'pending'
-          GROUP BY status, price, id
-          ORDER BY price DESC
+          WHERE id = $id
   ";
 
   $result = $conn->query($sql);
@@ -25,7 +27,7 @@
 
   $res = [];
 
-  if($result-> num_rows > 0){
+  if($result->num_rows>0){
     while($row = $result->fetch_assoc()){
       $res[]=$row;
     }
@@ -41,5 +43,5 @@
 
   echo json_encode($res);
 
-
+}
  ?>
